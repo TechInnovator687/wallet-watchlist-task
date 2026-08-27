@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallet Watchlist</title>
+    <link rel="stylesheet" href="watchlist-app.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1>Wallet Watchlist</h1>
+      <p class="lede">Track wallets and the shared treasury balance.</p>
+
+      <section class="panel">
+        <h2>Add wallet</h2>
+        <form id="add-wallet-form">
+          <label>
+            Address
+            <input id="wallet-address" name="wallet" type="text" />
+          </label>
+          <label>
+            Label
+            <input id="wallet-label" name="label" type="text" />
+          </label>
+          <label>
+            Allowance
+            <input id="wallet-allowance" name="allowance" type="number" value="100" />
+          </label>
+          <button type="submit">Add</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Treasury</h2>
+        <p>Balance: <span id="treasury-balance">0</span></p>
+        <form id="deposit-form">
+          <label>
+            Deposit amount
+            <input id="deposit-amount" name="amount" type="number" />
+          </label>
+          <button type="submit">Deposit</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Watchlist</h2>
+        <label>
+          Status
+          <select id="status-filter">
+            <option value="all">all</option>
+            <option value="active">active</option>
+            <option value="archived">archived</option>
+          </select>
+        </label>
+        <ul id="wallet-list"></ul>
+      </section>
+    </main>
+    <script src="watchlist-app.js"></script>
+  </body>
+</html>
