@@ -11,6 +11,8 @@
       <h1>Wallet Watchlist</h1>
       <p class="lede">Track wallets and the shared treasury balance.</p>
 
+      <p id="page-error" class="error-banner" hidden></p>
+
       <section class="panel">
         <h2>Add wallet</h2>
         <form id="add-wallet-form">
@@ -28,6 +30,7 @@
           </label>
           <button type="submit">Add</button>
         </form>
+        <p id="add-wallet-error" class="field-error" hidden></p>
       </section>
 
       <section class="panel">
@@ -40,6 +43,7 @@
           </label>
           <button type="submit">Deposit</button>
         </form>
+        <p id="deposit-error" class="field-error" hidden></p>
       </section>
 
       <section class="panel">
@@ -53,6 +57,7 @@
           </select>
         </label>
         <ul id="wallet-list"></ul>
+        <p id="wallet-list-empty" class="empty-state" hidden>No wallets match this filter.</p>
       </section>
     </main>
     <script src="watchlist-app.js"></script>
