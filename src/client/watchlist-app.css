@@ -1,45 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
-  background: #f4f6f8;
+  background: #eef1f5;
   color: #1b2430;
+  line-height: 1.5;
 }
 
 .page {
   max-width: 720px;
-  margin: 32px auto;
+  margin: 40px auto;
   padding: 0 16px 48px;
 }
 
-.lede {
+h1 {
+  font-size: 26px;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: #52606d;
+  margin: 0 0 14px;
+}
+
+.lede {
+  color: #64748b;
+  margin: 0 0 28px;
 }
 
 .panel {
   background: #fff;
-  border: 1px solid #d9e2ec;
-  border-radius: 8px;
-  padding: 16px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px 22px;
   margin: 16px 0;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
 }
 
 label {
   display: block;
-  margin: 8px 0;
+  margin: 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
 }
 
 input,
-select,
+select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 9px 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1b2430;
+  background: #fff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
 button {
-  margin-top: 4px;
+  margin-top: 10px;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+#treasury-balance {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
 }
 
 #wallet-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 #wallet-list li {
-  padding: 8px 0;
-  border-bottom: 1px solid #e4ebf1;
+  padding: 12px 4px;
+  border-bottom: 1px solid #eef1f5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#wallet-list li:last-child {
+  border-bottom: none;
+}
+
+#wallet-list strong {
+  font-size: 14px;
+}
+
+#wallet-list li button {
+  margin-top: 0;
+  padding: 7px 14px;
+  background: #0f172a;
+}
+
+#wallet-list li button:hover {
+  background: #1e293b;
+}
+
+.withdraw-amount {
+  width: 68px;
+  margin-top: 0;
+  padding: 7px 9px;
+  display: inline-block;
+}
+
+.error-banner,
+.field-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 12px 0;
+  font-size: 13.5px;
+}
+
+.empty-state {
+  color: #94a3b8;
+  font-style: italic;
+  margin: 10px 0 0;
+  font-size: 14px;
 }
